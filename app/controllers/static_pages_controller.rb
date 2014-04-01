@@ -5,4 +5,7 @@ class StaticPagesController <
 
   def help
   end
+
+  def form
+  end
 end

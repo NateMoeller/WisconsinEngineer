@@ -4,6 +4,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :author
       t.string :email
       t.text :content
+	  t.int :user_id
 
       t.timestamps
     end

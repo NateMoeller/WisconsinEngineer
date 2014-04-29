@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe "MagazinesPages" do
+  subject { page }
+  
+  
   describe "magazines page" do
     before { visit form_path }
 

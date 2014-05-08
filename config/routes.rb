@@ -1,5 +1,5 @@
 WisconsinEngineer369::Application.routes.draw do
-  get "users/new"
+  resources :users
   get "articles/new"
   get "magazine/new"
   root 'static_pages#home'

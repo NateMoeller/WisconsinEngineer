@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20140511173339) do
     t.string   "author"
     t.string   "email"
     t.text     "content"
+    t.integer  "user_id"
+    t.integer  "magazine_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

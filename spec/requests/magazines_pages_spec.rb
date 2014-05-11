@@ -10,6 +10,7 @@ describe "MagazinesPages" do
     it "should have the content 'Magazine Form'" do
       expect(page).to have_content('Magazine Form')
     end
+	
     it "should have the title 'magazine form'" do
       expect(page).to have_title('magazine form')
     end

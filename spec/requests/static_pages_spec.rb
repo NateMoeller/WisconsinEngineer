@@ -7,10 +7,10 @@ describe "Static pages" do
   describe "Home page" do
     before { visit root_path }
     let(:heading)    { 'Sample App' }
-    let(:page_title) { 'home' }
+    let(:page_title) { 'Home' }
 
-    it "should have the content 'home'" do
-      expect(page).to have_content('home')
+    it "should have the content 'Home'" do
+      expect(page).to have_content('Home')
     end
 
     it "should have the title 'WEM'" do
@@ -29,21 +29,6 @@ describe "Static pages" do
     end
     it "should have the title 'Help'" do
       expect(page).to have_title('Help')
-    end
-  end
-
-  describe "Form page" do
-
-    before { visit form_path }
-    let(:heading)    { 'form' }
-    let(:page_title) { 'magazine form' }
-
-    it "should have the content 'form'" do
-      expect(page).to have_content('form')
-    end
-
-    it "should have the title 'magazine form'" do
-      expect(page).to have_title('magazine form')
     end
   end
 end

@@ -5,14 +5,14 @@ describe "MagazinesPages" do
   
   
   describe "magazines page" do
-    before { visit form_path }
+    before { visit magazines_path }
 
     it "should have the content 'Magazine Form'" do
       expect(page).to have_content('Magazine Form')
     end
 	
-    it "should have the title 'magazine form'" do
-      expect(page).to have_title('magazine form')
+    it "should have the title 'Magazine Form'" do
+      expect(page).to have_title('Magazine Form')
     end
   end
 end

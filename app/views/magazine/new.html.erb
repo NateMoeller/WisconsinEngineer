@@ -1,2 +1,16 @@
-<h1>Magazine#new</h1>
-<p>Find me in app/views/magazine/new.html.erb</p>
+<%= provide(:title, 'Magazine Form') %>
+<h1>Magazine Form</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@magazine) do |f| %>
+	  <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :issue %>
+      <%= f.text_field :issue %>
+	  
+	  <%= f.submit "Create the magazine", class: "btn btn-large btn-primary" %>
+	<% end %>
+  </div>
+</div>

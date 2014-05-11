@@ -2,7 +2,6 @@ class ArticlesController < ApplicationController
   before_action :signed_in_user, only: [:new, :create, :destroy]
   def new
     @article = current_user.articles.build if signed_in?
-	
   end
   
   def create
@@ -21,6 +20,6 @@ class ArticlesController < ApplicationController
   private
 
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content, :author, :email, :user_id)
     end
 end

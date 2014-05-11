@@ -7,7 +7,7 @@ describe "User pages" do
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
 	let!(:m1) { FactoryGirl.create(:article, user: user, content: "Foo", title: "A Foo has happened") }
-    let!(:m2) { FactoryGirl.create(:article, user: user, content: "Bar", title: "A bar has happended") }
+    let!(:m2) { FactoryGirl.create(:article, user: user, content: "Bar", title: "A bar has happened") }
     
 	before { visit user_path(user) }
 

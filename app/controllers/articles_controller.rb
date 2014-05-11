@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :signed_in_user, only: [:new, :create, :destroy]
+  before_action :signed_in_user, only: [:new, :show, :create, :destroy]
   def new
     @article = current_user.articles.build if signed_in?
   end
@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
     else
       render 'static_pages/home'
     end
+  end
+  
+  def show
+	@article = Article.find(params[:id])
   end
 
   def destroy

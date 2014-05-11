@@ -5,4 +5,11 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
   end
+  
+  factory :article do
+    author   "Nathan Moeller"
+    email    "ndmoeller@wisc.edu"
+    title "A super cool article"
+    content "This is all of the content"
+  end
 end

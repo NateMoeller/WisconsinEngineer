@@ -1,4 +1,9 @@
 <% provide(:title, 'WEM') %>
-<h1>Home</h1>
-<p>find the old site <a href="http://wisconsinengineer.com/">Ruby on Rails Tutorial</a></p>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<% if !signed_in? %>
+  <h1>Home</h1>
+    <p>find the old site <a href="http://wisconsinengineer.com/">Ruby on Rails Tutorial</a></p>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<% else %>
+  hello
+
+<% end %>

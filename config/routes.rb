@@ -1,6 +1,7 @@
 WisconsinEngineer369::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :articles, only: [:new, :create, :destroy]
   get "articles/new"
   get "magazine/new"
   root 'static_pages#home'

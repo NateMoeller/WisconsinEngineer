@@ -20,5 +20,11 @@
   </div>
 </div>
 
+<% if !signed_in? %>
+  <h1>Home</h1>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+<% else %>
+  hello
+
+<% end %>
 <p>find the old site: <a href="http://wisconsinengineer.com/">Wisconsin Engineering Magazine</a></p>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>

@@ -1,0 +1,13 @@
+<%= form_for(@article) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_field :title, placeholder: "Article title..." %>
+  </div>
+  <div class="field"> 
+    <%= f.text_area :content, placeholder: "Article Content..." %>
+  </div>
+  <%= f.hidden_field :email, :value => current_user.email %>
+  <%= f.hidden_field :author, :value => current_user.name %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

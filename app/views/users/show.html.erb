@@ -7,5 +7,14 @@
         <%= @user.name %>
       </h1>
     </section>
+	<%= link_to "Create a new article", '../articles/new', class: "btn btn-large btn-primary" %>
   </aside>
+  <div class="span8">
+    <% if @user.articles.any? %>
+      <h3>Articles (<%= @user.articles.count %>)</h3>
+      <ol class="articles">
+        <%= render @articles %>
+      </ol>
+    <% end %>
+  </div>
 </div>

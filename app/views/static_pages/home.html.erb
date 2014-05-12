@@ -2,34 +2,32 @@
 <h1>Current issue</h1>
 
 <div class="main-article">
-  <%= link_to image_tag("lake.jpg", alt: "Rails") %>
+  <%= link_to image_tag("lake.jpg", alt: "Rails"), "articles/4" %>
 </div>
 
 <div class="subArticleContainer">
   <div class="sub-article article1">
-    <%= link_to image_tag("sound.jpeg") %>
+    <%= link_to image_tag("sound.jpeg"), "articles/1" %>
     <p class="artileInfo">The Science of Sound</p>
   </div>
   <div class="sub-article article2">
-    <%= link_to image_tag("space.jpg") %>
+    <%= link_to image_tag("space.jpg"), "articles/2" %>
     <p class="artileInfo">McNair Scholars Program</p>
   </div>
   <div class="sub-article article3">
-    <%= link_to image_tag("tire.jpg") %>
+    <%= link_to image_tag("tire.jpg"), "articles/3"%>
     <p class="artileInfo">Air-Less Tires</p>
   </div>
 </div>
 
-<% if !signed_in? %>
-  <h1>Home</h1>
-    <%= link_to "Become an Editor", signup_path, class: "btn btn-large btn-primary" %>
-<% else %>
-  
 
-<% end %>
 <div class="span8">
-      <h3>Past Magazines</h3>
-      <ol class="articles">
-        <%= render @magazines %>
-      </ol>
-  </div>
+    <h3>Past Magazines</h3>
+    <ol class="articles">
+      <%= render @magazines %>
+    </ol>
+</div>
+<% if !signed_in? %>
+    <%= link_to "Become an Editor", signup_path, class: "btn btn-large btn-primary" %>  
+<% end %>	
+  

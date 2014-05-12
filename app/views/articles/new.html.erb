@@ -4,8 +4,10 @@
     <%= f.text_field :title, placeholder: "Article title..." %>
   </div>
   <div class="field"> 
-    <%= f.text_area :content, placeholder: "Article Content..." %>
+    <%= f.text_area :content, placeholder: "Article Content...", :size => "80x10" %>
   </div>
+  <%= f.label :magazine_id %><br>
+	<%= f.collection_select :magazine_id, Magazine.order(:name), :id, :name, include_blank: false %>
   <%= f.hidden_field :email, :value => current_user.email %>
   <%= f.hidden_field :author, :value => current_user.name %>
   <%= f.hidden_field :user_id, :value => current_user.id %>

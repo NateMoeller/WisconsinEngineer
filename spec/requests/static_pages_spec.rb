@@ -9,9 +9,6 @@ describe "Static pages" do
     let(:heading)    { 'Sample App' }
     let(:page_title) { 'Home' }
 
-    it "should have the content 'Home'" do
-      expect(page).to have_content('Home')
-    end
 
     it "should have the title 'WEM'" do
       expect(page).to have_title('WEM')
@@ -24,8 +21,8 @@ describe "Static pages" do
     let(:heading)    { 'Help' }
     let(:page_title) { 'Help' }
 
-    it "should have the content 'faq'" do
-      expect(page).to have_content('faq')
+    it "should have the content 'FAQ'" do
+      expect(page).to have_content('FAQ')
     end
     it "should have the title 'Help'" do
       expect(page).to have_title('Help')

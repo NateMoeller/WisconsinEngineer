@@ -1,4 +1,24 @@
 <% provide(:title, 'WEM') %>
-<h1>Home</h1>
-<p>find the old site <a href="http://wisconsinengineer.com/">Ruby on Rails Tutorial</a></p>
+<h1>Current issue</h1>
+
+<div class="main-article">
+  <%= link_to image_tag("lake.jpg", alt: "Rails") %>
+</div>
+
+<div class="subArticleContainer">
+  <div class="sub-article article1">
+    <%= link_to image_tag("sound.jpeg") %>
+    <p class="artileInfo">The Science of Sound</p>
+  </div>
+  <div class="sub-article article2">
+    <%= link_to image_tag("space.jpg") %>
+    <p class="artileInfo">McNair Scholars Program</p>
+  </div>
+  <div class="sub-article article3">
+    <%= link_to image_tag("tire.jpg") %>
+    <p class="artileInfo">Air-Less Tires</p>
+  </div>
+</div>
+
+<p>find the old site: <a href="http://wisconsinengineer.com/">Wisconsin Engineering Magazine</a></p>
 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>

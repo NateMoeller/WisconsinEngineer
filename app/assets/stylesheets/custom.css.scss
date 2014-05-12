@@ -69,14 +69,14 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: gray;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: $gray;
     text-decoration: none;
   }
 }
@@ -169,4 +169,64 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+@home page styling
+
+.main-article{
+  height:300px;
+  min-width:940px;
+  margin:auto;
+  position:relative;
+}
+
+.main-article img{
+  height:350px;
+  min-width:940px;
+  margin:auto;
+  border:2px solid black;
+}
+
+.subArticleContainer {
+  min-width:940px;
+  margin:auto;
+  position:relative;
+}
+
+.subArticleContainer .sub-article{
+  width:30%;
+  height:200px;
+}
+
+.article1{
+  float:left;
+  position:relative;
+  top:20px;
+}
+
+.article2{
+  margin:auto;
+  position:relative;
+  top:20px;
+}
+
+.article3{
+  position:absolute;
+  right:0px;
+  top:20px;
+}
+
+.artileInfo{
+  text-align:center;
+  padding-top:3px;
+}
+
+img{
+  border: 2px solid black;
+}
+
+.navbar{
+position:relative;
+top:-60px;
+  border-bottom:2px solid #4F6FFF;
 }

@@ -11,14 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511205301) do
+ActiveRecord::Schema.define(version: 20140512002818) do
 
   create_table "articles", force: true do |t|
     t.string   "author"
     t.string   "email"
     t.text     "content"
-    t.integer  "user_id"
-    t.integer  "magazine_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -39,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140511205301) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.boolean  "admin",           default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

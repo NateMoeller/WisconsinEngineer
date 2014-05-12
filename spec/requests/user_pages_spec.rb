@@ -16,7 +16,7 @@ describe "User pages" do
 	
 	describe "articles" do
       it { should have_content(m1.content) }
-      it { should have_content(m2.content) }
+      it { should have_content(m2.title) }
       it { should have_content(user.articles.count) }
     end
   end

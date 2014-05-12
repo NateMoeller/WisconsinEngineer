@@ -1,5 +1,5 @@
 <li>
-  <span class="content"><%= magazine.name %></span>
+  <span class="content"><%= link_to magazine.name, magazine %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(magazine.created_at) %> ago.
   </span>

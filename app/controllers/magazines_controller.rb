@@ -14,6 +14,11 @@ class MagazinesController < ApplicationController
     end
   end
   
+  def show
+    @magazine = Magazine.find(params[:id])
+	@articles = @magazine.articles(page: params[:page]) #pagenate here?
+  end
+  
   private
 
     def magazine_params

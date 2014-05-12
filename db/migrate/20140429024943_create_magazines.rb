@@ -6,5 +6,6 @@ class CreateMagazines < ActiveRecord::Migration
 
       t.timestamps
     end
+	add_index :articles, [:magazine_id, :created_at]
   end
 end

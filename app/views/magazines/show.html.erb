@@ -1,0 +1,11 @@
+<% provide(:title, 'Magazine') %>
+<h1><%= @magazine.name %></h1>
+<p>Issue number: <%= @magazine.issue %></p>
+<div class="span8">
+    <% if @magazine.articles.any? %>
+      <h3>Articles (<%= @magazine.articles.count %>)</h3>
+      <ol class="articles">
+        <%= render @articles %>
+      </ol>
+    <% end %>
+  </div> 

@@ -21,6 +21,12 @@
 				  link_to "Create a magazine", "/magazines/new"
 				end %>
 				</li>
+				<li>
+				<%=
+				if current_user.admin?
+				  link_to "Write an Article", "/articles/new"
+				end %>
+				</li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>

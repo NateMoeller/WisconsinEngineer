@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :signed_in_user, only: [:new, :show, :create, :destroy]
+  #before_action :signed_in_user, only: [:new, :show, :create, :destroy]
   def new
     @article = current_user.articles.build if signed_in?
   end

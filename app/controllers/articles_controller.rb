@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   def new
+    redirect_to(root_url) unless current_user && current_user.admin?
     @article = current_user.articles.build if signed_in?
   end
   
